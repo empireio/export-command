@@ -385,7 +385,7 @@ class WP_Export_Query {
 			if ( apply_filters( 'wxr_export_skip_postmeta', false, $meta->meta_key, $meta ) ) {
 				continue;
 			}
-			if ( in_array( $meta->meta_key, [ '_edit_lock', '_wp_attachment_metadata', '_wp_attached_file' ], true ) ) {
+			if ( in_array( $meta->meta_key, [ '_edit_lock' ], true ) ) {
 				continue;
 			}
 			$meta_for_export[] = $meta;
